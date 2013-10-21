@@ -1,0 +1,307 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"    
+    android:background="#94B8D4"
+    android:windowActionBar="false"  
+    tools:context=".AddActivity" >
+	
+	    <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="#94B8D4"
+				>
+	        
+	        <Button
+	            android:id="@+id/save_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:onClick="addContact"
+	            android:text="@string/save_button"
+	            android:textColor="#eeeeee"
+	            android:textStyle="bold" />
+	    	
+	    	<View
+	    	    android:layout_marginLeft="6dp"
+	    	    android:layout_marginTop="10dp"
+	    	    android:id="@+id/divider"
+			    android:layout_width="2dp"
+			    android:layout_height="30dp"
+			    android:layout_toLeftOf="@id/save_button"
+			    android:background="@android:color/darker_gray"/>
+	    	
+	        <Button
+	            android:id="@+id/cancel_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_toLeftOf="@+id/divider"
+	            android:onClick="cancelAdd"
+	            android:text="@string/cancel_button"
+	            android:textColor="#eeeeee"
+	            android:textStyle="bold" />
+	        
+	   	</RelativeLayout>
+	    
+	    <RelativeLayout  
+	        android:layout_width="match_parent"
+	    	android:layout_height="50dp" 
+	    	>
+	        
+	        <TextView
+	            android:id="@+id/create_contact"
+	            android:layout_width="fill_parent"
+	            android:layout_height="60dp"
+	            android:layout_centerVertical="true"
+	            android:background="#eeeeee"
+	            android:gravity="center_vertical"
+	            android:text="@string/add_new_string"
+	            android:textColor="#000000"
+	            android:textSize="20sp" >
+	            
+	        </TextView>
+	       	
+	
+	    </RelativeLayout>
+		
+		<ScrollView 
+	    android:id="@+id/ScrolView" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent" >
+
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+		
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="60dp"
+			            android:background="#acaeb5"
+			            android:gravity="center_vertical"
+			            android:text="@string/new_name"
+			            android:textColor="#000000"
+			            android:textSize="20sp" />
+			    
+			    </LinearLayout>
+				<LinearLayout 
+				    android:background="#C1D6D6"
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal">
+					    
+					    <TextView
+					        
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:text="@string/f_n_l"
+					        android:textSize="17sp" />
+					    
+					    <EditText
+					        android:id="@+id/add_first_name"
+					        android:layout_width="match_parent"
+					        android:layout_height="50dp"
+					        android:layout_marginRight="16dp"
+					        android:hint="@string/add_first_name_hint"
+					        android:textSize="15sp"
+					        android:textStyle="italic" />
+				    
+			    </LinearLayout>
+				
+				<LinearLayout
+				    
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="#C1D6D6"
+				    android:orientation="horizontal" >
+					    
+					    <TextView
+					        
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:textSize="17sp"
+					        android:text="@string/last_name" />
+					    
+					    <EditText
+					        android:id="@+id/add_sur_name"
+					        android:layout_width="match_parent"
+					        android:layout_height="50dp"
+					        android:layout_marginRight="16dp"
+					        android:hint="@string/add_last_name"
+					        android:textSize="15sp"
+					        android:textStyle="italic" />
+			  
+			    </LinearLayout>
+			   
+			    <TextView
+			        android:layout_width="fill_parent"
+			        android:layout_height="60dp"
+			        android:background="#acaeb5"
+			        android:gravity="center_vertical"
+			        android:text="@string/contact_header_string"
+			        android:textColor="#000000"
+			        android:textSize="20sp" />
+			    
+			    <LinearLayout
+			        
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal"
+			    	android:background="#C1D6D6">
+					    
+					    <TextView
+					        
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:textSize="17sp"
+					        android:text="@string/home_number" />
+					    
+					    <EditText
+					        
+					        android:id="@+id/add_mobile_ph"
+					        android:layout_width="match_parent"
+					        android:layout_height="50dp"
+					        android:layout_marginRight="16dp"
+					        android:hint="@string/add_home"
+					        android:textSize="15sp"
+					        android:textStyle="italic" />
+					    
+			    </LinearLayout>
+				
+				<LinearLayout 
+				    
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal"
+			    	android:background="#C1D6D6">
+					    
+					    <TextView
+					        
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:textSize="17sp"
+					        android:layout_marginLeft="16dp"
+					        android:text="@string/mobile_number" />
+					    
+					    <EditText
+					        android:id="@+id/add_home_ph"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:layout_marginRight="16dp"
+					        android:textSize="15sp"
+					        android:hint="@string/add_mobile"
+					        android:textStyle="italic" />
+				    
+			    </LinearLayout>
+			    
+			    <LinearLayout
+			        
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal"
+			    	android:background="#C1D6D6">
+					    
+					    <TextView
+					        android:textSize="17sp"
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:text="@string/work_number" />
+					    
+					    <EditText
+					        android:id="@+id/add_work_ph"
+					        android:layout_width="match_parent"
+					        android:layout_height="50dp"
+					        android:layout_marginRight="16dp"
+					        android:textSize="15sp"
+					        android:hint="@string/add_work"
+					        android:textStyle="italic" />
+					    
+			    </LinearLayout>
+			    
+			    
+			    
+			    <LinearLayout
+			        android:background="#C1D6D6"
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="vertical">
+			
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="50dp"
+						android:text="@string/add_address_label"
+						android:layout_marginLeft="16dp"
+						android:textSize="17sp"/>
+					        
+					<EditText 
+						android:layout_marginRight="16dp"
+						android:id="@+id/add_street_address"
+					    android:layout_width="match_parent"
+					    android:layout_height="50dp"
+					    android:hint="@string/add_address_label_hint"
+					    android:textStyle="italic"
+					    android:textSize="15sp"/>
+				</LinearLayout>
+					    
+				<LinearLayout
+			        android:background="#C1D6D6"
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="vertical">
+			
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="50dp"
+						android:text="@string/add_email"
+						android:layout_marginLeft="16dp"
+						android:textSize="17sp"/>
+					        
+					<EditText 
+					    android:id="@+id/add_email_address"
+						android:layout_marginRight="16dp"
+					    android:layout_width="match_parent"
+					    android:layout_height="50dp"
+					    android:hint="@string/add_email_hint"
+					    android:textStyle="italic"
+					    android:textSize="15sp"/>
+				</LinearLayout>
+				
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal"
+			    	android:background="#C1D6D6">
+					    
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="50dp"
+						android:text="@string/add_dateOfBirth"
+						android:layout_marginLeft="16dp"
+						android:textSize="17sp"/>
+					        
+					<EditText 
+					    android:id="@+id/add_dob"
+						android:layout_marginRight="16dp"
+					    android:layout_width="match_parent"
+					    android:layout_height="50dp"
+					    android:hint="@string/add_dob_hint"
+					    android:textStyle="italic"
+					    android:textSize="15sp"/>
+					    		    		    
+					  
+					    	        
+			    </LinearLayout>
+		    </LinearLayout>
+	    </ScrollView>
+      
+</LinearLayout>

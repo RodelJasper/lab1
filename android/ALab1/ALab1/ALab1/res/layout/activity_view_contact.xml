@@ -1,0 +1,269 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"    
+    android:background="#94B8D4"
+    android:windowActionBar="false"  
+    tools:context=".AddActivity" 
+    >
+	
+	    <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="#94B8D4"
+				>
+	        
+	        <Button
+	            android:id="@+id/save_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:onClick="addContact"
+	            android:text="@string/save_button"
+	            android:textColor="#eeeeee"
+	            android:textStyle="bold" />
+	    	
+	    	<View
+	    	    android:layout_marginLeft="6dp"
+	    	    android:layout_marginTop="10dp"
+	    	    android:id="@+id/divider"
+			    android:layout_width="2dp"
+			    android:layout_height="30dp"
+			    android:layout_toLeftOf="@id/save_button"
+			    android:background="@android:color/darker_gray"/>
+	    	
+	        <Button
+	            android:id="@+id/cancel_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_toLeftOf="@+id/divider"
+	            android:onClick="cancelAdd"
+	            android:text="@string/back_button"
+	            android:textColor="#eeeeee"
+	            android:textStyle="bold" />
+	        
+	   	</RelativeLayout>
+	    
+	    <RelativeLayout  
+	        android:layout_width="match_parent"
+	    	android:layout_height="50dp" 
+	    	>
+	        
+	        <TextView
+	            android:id="@+id/create_contact"
+	            android:layout_width="fill_parent"
+	            android:layout_height="60dp"
+	            android:layout_centerVertical="true"
+	            android:background="#eeeeee"
+	            android:gravity="center_vertical"
+	            android:text="@string/contact_details_label"
+	            android:textColor="#000000"
+	            android:textSize="20sp" >
+	            
+	        </TextView>
+	       	
+	
+	    </RelativeLayout>
+		
+		<ScrollView 
+	    android:id="@+id/ScrolView" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent" >
+
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+		
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="60dp"
+			            android:background="#acaeb5"
+			            android:gravity="center_vertical"
+			            android:text="@string/new_name"
+			            android:textColor="#000000"
+			            android:textSize="20sp" />
+			    
+			    </LinearLayout>
+				<LinearLayout 
+				    android:background="#C1D6D6"
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal">
+					    
+					    <TextView
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:text="@string/full_name_label"
+					        android:textSize="17sp" />
+					    
+					    <TextView
+					        
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:id="@+id/list_item_text_name"
+					        android:textSize="17sp" />
+				    
+			  
+			    </LinearLayout>
+			   
+			    <TextView
+			        android:layout_width="fill_parent"
+			        android:layout_height="60dp"
+			        android:background="#acaeb5"
+			        android:gravity="center_vertical"
+			        android:text="@string/contact_header_string"
+			        android:textColor="#000000"
+			        android:textSize="20sp" />
+			    
+			    <LinearLayout
+			        
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal"
+			    	android:background="#C1D6D6">
+					    
+					    <TextView
+					        
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:textSize="17sp"
+					        android:text="@string/home_number" />
+					    
+					    <TextView
+					        
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:textSize="17sp"
+					        android:id="@+id/list_item_text_homeNum"/>
+					    
+			    </LinearLayout>
+				
+				<LinearLayout 
+				    
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal"
+			    	android:background="#C1D6D6">
+					    
+					    <TextView
+					        
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:textSize="17sp"
+					        android:layout_marginLeft="16dp"
+					        android:text="@string/mobile_number" />
+					    
+					    <TextView
+					        
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:textSize="17sp"
+					        android:layout_marginLeft="16dp"
+					        android:id="@+id/list_item_text_mobileNum" />
+				    
+			    </LinearLayout>
+			    
+			    <LinearLayout
+			        
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal"
+			    	android:background="#C1D6D6">
+					    
+					    <TextView
+					        android:textSize="17sp"
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:text="@string/work_number" />
+					    
+					    <TextView
+					        android:textSize="17sp"
+					        android:layout_width="wrap_content"
+					        android:layout_height="50dp"
+					        android:layout_marginLeft="16dp"
+					        android:id="@+id/list_item_text_workNum" />
+					    
+			    </LinearLayout>
+			    
+			    
+			    
+			    <LinearLayout
+			        android:background="#C1D6D6"
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="vertical">
+			
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="50dp"
+						android:text="@string/add_address_label"
+						android:layout_marginLeft="16dp"
+						android:textSize="17sp"/>
+					        
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="50dp"
+						android:id="@+id/list_item_text_add1"
+						android:layout_marginLeft="16dp"
+						android:textSize="17sp"/>
+				</LinearLayout>
+					    
+				<LinearLayout
+			        android:background="#C1D6D6"
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="vertical">
+			
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="50dp"
+						android:text="@string/add_email"
+						android:layout_marginLeft="16dp"
+						android:textSize="17sp"/>
+					        
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="50dp"
+						android:id="@+id/list_item_text_email1"
+						android:layout_marginLeft="16dp"
+						android:textSize="17sp"/>
+				</LinearLayout>
+				
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			    	android:layout_height="wrap_content" 
+			    	android:orientation="horizontal"
+			    	android:background="#C1D6D6">
+					    
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="50dp"
+						android:text="@string/add_dateOfBirth"
+						android:layout_marginLeft="16dp"
+						android:textSize="17sp"/>
+					
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="50dp"
+						android:id="@+id/list_item_text_dob"
+						android:layout_marginLeft="16dp"
+						android:textSize="17sp"/>       
+					
+					    	        
+			    </LinearLayout>
+		    </LinearLayout>
+	    </ScrollView>
+      
+</LinearLayout>
