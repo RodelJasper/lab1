@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <TextView 
+        android:id="@+id/list_item_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"
+        android:textColor="#eeeeee"/>
+    
+    <TextView 
+        android:id="@+id/list_item_text_add1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"
+        android:textColor="#eeeeee"/>
+
+    
+    <TextView 
+        android:id="@+id/list_item_text_email1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"
+        android:textColor="#eeeeee"/>
+
+    
+    <TextView 
+        android:id="@+id/list_item_text_homeNum"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"
+        android:textColor="#eeeeee"/>
+    
+   <TextView 
+        android:id="@+id/list_item_text_mobileNum"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"
+        android:textColor="#eeeeee"/>
+   
+   <TextView 
+        android:id="@+id/list_item_text_workNum"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"
+        android:textColor="#eeeeee"/>
+   
+   <TextView 
+        android:id="@+id/list_item_text_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"
+        android:textColor="#eeeeee"/>
+
+</LinearLayout>
